@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto de Natal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Escolha o seu gênero</h1>
+        <div class="quadrado" onclick="irParaSaudacao('mulher')">
+            <p>Mulher</p>
+        </div>
+        <div class="quadrado" onclick="irParaSaudacao('homem')">
+            <p>Homem</p>
+        </div>
+    </div>
+
+    <script>
+        function irParaSaudacao(genero) {
+            window.location.href = `saudacao.html?genero=${genero}`;
+        }
+    </script>
+</body>
+</html>

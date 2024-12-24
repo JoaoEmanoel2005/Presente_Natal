@@ -1,0 +1,135 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    background-image: url('fundo.jfif'); /* Imagem de fundo natalino */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+h1, h2 {
+    color: #333;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Estilos da container */
+.container {
+    text-align: center;
+}
+
+/* Estilo dos quadrados */
+.quadrado {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.quadrado:hover {
+    transform: scale(1.1);
+}
+
+.quadrado p {
+    font-size: 20px;
+    animation: slideUp 1s ease-out;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animação de slide-up */
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Estilos de responsividade */
+@media (max-width: 768px) {
+    .quadrado {
+        width: 150px;
+        height: 150px;
+        margin: 15px;
+    }
+
+    .presentes .quadrado {
+        width: 100px;
+        height: 100px;
+    }
+
+    .presentes img {
+        width: 90px;
+        height: 90px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}
+
+/* Tela de presents */
+.presentes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.presentes .quadrado {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom ao passar o mouse nas imagens */
+.presentes .quadrado:hover {
+    transform: scale(1.1);
+}
+
+.imagem-presente {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}

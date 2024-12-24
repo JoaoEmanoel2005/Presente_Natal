@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudação</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="saudacao" class="titulo">Olá!</h1>
+        <h2>Escolha o gênero da pessoa que você vai presentear</h2>
+        <div class="quadrado" onclick="irParaPresentes('mulher')">
+            <p>Mulher</p>
+        </div>
+        <div class="quadrado" onclick="irParaPresentes('homem')">
+            <p>Homem</p>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const genero = urlParams.get('genero');
+        const saudacao = genero === 'mulher' ? 'Oi, minha amiga!' : 'Oi, meu amigo!';
+        document.getElementById('saudacao').textContent = saudacao;
+
+        function irParaPresentes(genero) {
+            window.location.href = `presentes.html?genero=${genero}`;
+        }
+    </script>
+</body>
+</html>
