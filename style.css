@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     padding: 20px;
     position: relative;
-    background-image: url('fundo.jfif'); /* Imagem de fundo natalino */
+    background-image: url('images/fundo.jfif'); /* Imagem de fundo natalino */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
